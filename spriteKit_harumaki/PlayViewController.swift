@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class ViewController: UIViewController {
+class PlayViewController: UIViewController {
 
     @IBOutlet var skView:SKView!
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
      //シーンを呼び出して、skViewに追加する
     func addScene(skView:SKView){
-        let scene = HMScene()
+        let scene = HMGamePlayScene()
         scene.size = skView.frame.size
         scene.backgroundColor = UIColor.clear
         skView.presentScene(scene)

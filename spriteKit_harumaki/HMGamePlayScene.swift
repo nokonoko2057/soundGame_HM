@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class HMScene: SKScene {
+class HMGamePlayScene: SKScene {
 
     //最初に呼ばれるところ
     override func didMove(to view: SKView) {

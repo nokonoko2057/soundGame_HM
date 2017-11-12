@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		615549711FB6AB2400614737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615549701FB6AB2400614737 /* AppDelegate.swift */; };
-		615549731FB6AB2400614737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615549721FB6AB2400614737 /* ViewController.swift */; };
+		615549731FB6AB2400614737 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615549721FB6AB2400614737 /* PlayViewController.swift */; };
 		615549761FB6AB2400614737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615549741FB6AB2400614737 /* Main.storyboard */; };
 		615549781FB6AB2400614737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 615549771FB6AB2400614737 /* Assets.xcassets */; };
 		6155497B1FB6AB2400614737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615549791FB6AB2400614737 /* LaunchScreen.storyboard */; };
 		615549861FB6AB2400614737 /* spriteKit_harumakiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615549851FB6AB2400614737 /* spriteKit_harumakiTests.swift */; };
 		615549911FB6AB2400614737 /* spriteKit_harumakiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615549901FB6AB2400614737 /* spriteKit_harumakiUITests.swift */; };
-		6155499F1FB6ACCF00614737 /* HMScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155499E1FB6ACCF00614737 /* HMScene.swift */; };
+		6155499F1FB6ACCF00614737 /* HMGamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6155499E1FB6ACCF00614737 /* HMGamePlayScene.swift */; };
+		61FA23F51FB7F16100FB506A /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA23F41FB7F16100FB506A /* InputViewController.swift */; };
+		61FA23F71FB7F17D00FB506A /* HMGameInputScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA23F61FB7F17D00FB506A /* HMGameInputScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		6155496D1FB6AB2400614737 /* spriteKit_harumaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spriteKit_harumaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		615549701FB6AB2400614737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		615549721FB6AB2400614737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		615549721FB6AB2400614737 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		615549751FB6AB2400614737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		615549771FB6AB2400614737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6155497A1FB6AB2400614737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,9 +50,11 @@
 		6155498C1FB6AB2400614737 /* spriteKit_harumakiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spriteKit_harumakiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		615549901FB6AB2400614737 /* spriteKit_harumakiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spriteKit_harumakiUITests.swift; sourceTree = "<group>"; };
 		615549921FB6AB2400614737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6155499E1FB6ACCF00614737 /* HMScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMScene.swift; sourceTree = "<group>"; };
+		6155499E1FB6ACCF00614737 /* HMGamePlayScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGamePlayScene.swift; sourceTree = "<group>"; };
 		615549A01FB6AEB400614737 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		615549A11FB6B03C00614737 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		61FA23F41FB7F16100FB506A /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		61FA23F61FB7F17D00FB506A /* HMGameInputScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGameInputScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +108,11 @@
 				615549A01FB6AEB400614737 /* 0.png */,
 				615549A11FB6B03C00614737 /* 1.png */,
 				615549701FB6AB2400614737 /* AppDelegate.swift */,
-				615549721FB6AB2400614737 /* ViewController.swift */,
-				6155499E1FB6ACCF00614737 /* HMScene.swift */,
+				615549721FB6AB2400614737 /* PlayViewController.swift */,
+				6155499E1FB6ACCF00614737 /* HMGamePlayScene.swift */,
 				615549741FB6AB2400614737 /* Main.storyboard */,
+				61FA23F41FB7F16100FB506A /* InputViewController.swift */,
+				61FA23F61FB7F17D00FB506A /* HMGameInputScene.swift */,
 				615549771FB6AB2400614737 /* Assets.xcassets */,
 				615549791FB6AB2400614737 /* LaunchScreen.storyboard */,
 				6155497C1FB6AB2400614737 /* Info.plist */,
@@ -266,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				615549731FB6AB2400614737 /* ViewController.swift in Sources */,
-				6155499F1FB6ACCF00614737 /* HMScene.swift in Sources */,
+				61FA23F71FB7F17D00FB506A /* HMGameInputScene.swift in Sources */,
+				615549731FB6AB2400614737 /* PlayViewController.swift in Sources */,
+				6155499F1FB6ACCF00614737 /* HMGamePlayScene.swift in Sources */,
 				615549711FB6AB2400614737 /* AppDelegate.swift in Sources */,
+				61FA23F51FB7F16100FB506A /* InputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

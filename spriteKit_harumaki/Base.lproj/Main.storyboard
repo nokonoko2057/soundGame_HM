@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Play View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="spriteKit_harumaki" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PlayViewController" customModule="spriteKit_harumaki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="-342"/>
+            <point key="canvasLocation" x="532" y="-300"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WUm-5H-XHn">
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-1000.2717391304349" y="-300"/>
         </scene>
-        <!--View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="yIb-db-8dj">
             <objects>
-                <viewController id="SkI-CR-XEl" sceneMemberID="viewController">
+                <viewController id="SkI-CR-XEl" customClass="InputViewController" customModule="spriteKit_harumaki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ymo-ip-dWK">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +85,9 @@
                                         <state key="normal" title="L">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedButtonWithButton:" destination="SkI-CR-XEl" eventType="touchUpInside" id="wB1-gP-KNu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boR-3f-gw7">
                                         <rect key="frame" x="463" y="157" width="100" height="100"/>
@@ -93,6 +96,9 @@
                                         <state key="normal" title="R">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tappedButtonWithButton:" destination="SkI-CR-XEl" eventType="touchUpInside" id="tNh-zC-tGb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.52061264269999996" green="1" blue="0.4999027338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,6 +107,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="JMa-WV-NUK"/>
                     </view>
+                    <connections>
+                        <outlet property="leftButton" destination="Kzk-Yk-dOr" id="nf1-Mn-Xpe"/>
+                        <outlet property="rightButton" destination="boR-3f-gw7" id="arE-wu-jAA"/>
+                        <outlet property="skView" destination="7jV-x6-dbI" id="r6F-c8-98k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwI-o0-nT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9U-nf-e4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-253.53260869565219" y="-342.02898550724638"/>
+            <point key="canvasLocation" x="-253" y="-300"/>
         </scene>
     </scenes>
 </document>
