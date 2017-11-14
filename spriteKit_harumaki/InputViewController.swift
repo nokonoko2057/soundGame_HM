@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class InputViewController: UIViewController {
     
@@ -16,36 +17,60 @@ class InputViewController: UIViewController {
     @IBOutlet var rightButton:UIButton!
     @IBOutlet var leftButton:UIButton!
     
-    var rightTime:[Float] = []
-    var leftTime:[Float] = []
+    var rightTime:[UInt] = []
+    var leftTime:[UInt] = []
     
     var nowTime:Float = 0.00
     
+    var audioPlayer:AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let timeInterval:Float = 0.01
-        Timer.scheduledTimer(withTimeInterval: TimeInterval(timeInterval), repeats: true){ (timer) in
-            self.nowTime += timeInterval * 100
-            
-            
-            print(self.nowTime)
-        }
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        soundPlay()
     }
 
     @IBAction func tappedButton(button:UIButton){
-        if button == rightButton {
-            print("right")
-            rightTime.append(nowTime)
+        
+        if audioPlayer.isPlaying == false {
+            return
         }
         
+        if button == rightButton {
+            print("right:\(UInt(audioPlayer.currentTime * 100))")
+            rightTime.append(UInt(audioPlayer.currentTime * 100))
+        }
         if button == leftButton {
-            print("left")
-            leftTime.append(nowTime)
+            print("left:\(UInt(audioPlayer.currentTime * 100))")
+            leftTime.append(UInt(audioPlayer.currentTime * 100))
         }
     }
     
+    
+    func soundPlay(){
+        // 再生する audio ファイルのパスを取得
+        do {
+            let filePath = Bundle.main.path(forResource: "sound",ofType: "mp3")
+            let musicPath = URL(fileURLWithPath: filePath!)
+            audioPlayer = try AVAudioPlayer(contentsOf: musicPath)
+        } catch {
+            print("error")
+        }
+        audioPlayer.play()
+        
+        audioPlayer.delegate = self
+        audioPlayer.prepareToPlay()
+        
+        
+    }
+    
+}
 
+extension InputViewController: AVAudioPlayerDelegate{
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        
+    }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6139CFBF1FB897B800D746D0 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6139CFBE1FB896E700D746D0 /* sound.mp3 */; };
 		615549711FB6AB2400614737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615549701FB6AB2400614737 /* AppDelegate.swift */; };
 		615549731FB6AB2400614737 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615549721FB6AB2400614737 /* PlayViewController.swift */; };
 		615549761FB6AB2400614737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 615549741FB6AB2400614737 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6139CFBE1FB896E700D746D0 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 		6155496D1FB6AB2400614737 /* spriteKit_harumaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spriteKit_harumaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		615549701FB6AB2400614737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		615549721FB6AB2400614737 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				615549A01FB6AEB400614737 /* 0.png */,
 				615549A11FB6B03C00614737 /* 1.png */,
+				6139CFBE1FB896E700D746D0 /* sound.mp3 */,
 				615549701FB6AB2400614737 /* AppDelegate.swift */,
 				615549721FB6AB2400614737 /* PlayViewController.swift */,
 				6155499E1FB6ACCF00614737 /* HMGamePlayScene.swift */,
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6139CFBF1FB897B800D746D0 /* sound.mp3 in Resources */,
 				6155497B1FB6AB2400614737 /* LaunchScreen.storyboard in Resources */,
 				615549781FB6AB2400614737 /* Assets.xcassets in Resources */,
 				615549761FB6AB2400614737 /* Main.storyboard in Resources */,

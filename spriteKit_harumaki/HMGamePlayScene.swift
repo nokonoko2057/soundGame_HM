@@ -11,19 +11,13 @@ import SpriteKit
 
 class HMGamePlayScene: SKScene {
 
+    var isRightSwitch:Bool = false
+    
     //最初に呼ばれるところ
     override func didMove(to view: SKView) {
-//        fallCubes()
-        
         self.parent?.alpha = 0.0
         self.backgroundColor = UIColor.clear
         setupTapButton()
-    
-        
-        
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
-            self.makeMoveNode()
-        }
     }
     
     //画像を落とすところ //使わない
@@ -64,7 +58,7 @@ class HMGamePlayScene: SKScene {
    
         let circle = SKShapeNode(circleOfRadius: 5)
         circle.position = CGPoint(x: 0.0, y: 0.0)
-        circle.fillColor = UIColor.yellow
+        circle.fillColor = UIColor.blue
         self.addChild(circle)
         
        moveNodeActions(node: circle)
@@ -93,7 +87,6 @@ class HMGamePlayScene: SKScene {
         
         //グループのアクションの後に、削除を行うシーケンス
         let actionSequence = SKAction.sequence([actionGroup,removeAction])
-        
         //動きを実行する
         node.run(actionSequence)
     }

@@ -11,7 +11,7 @@ import SpriteKit
 
 class HMGameInputScene: SKScene {
     override func didMove(to view: SKView) {
-        
+
     }
     
 }
