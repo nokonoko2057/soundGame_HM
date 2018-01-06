@@ -17,8 +17,10 @@ class PlayViewController: UIViewController {
     
     var audioPlayer:AVAudioPlayer!
     
-    var rightTime:[UInt] = [500,510,600,700,900,1111]
+    var rightTime:[UInt] = []
     var leftTime:[UInt] = []
+    
+    var audioName: String = "sound"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class PlayViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        getTimingData(audioName: audioName)
         soundPlay()
     }
     
@@ -53,7 +56,7 @@ class PlayViewController: UIViewController {
     func soundPlay(){
         // 再生する audio ファイルのパスを取得
         do {
-            let filePath = Bundle.main.path(forResource: "sound",ofType: "mp3")
+            let filePath = Bundle.main.path(forResource: audioName ,ofType: "mp3")
             let musicPath = URL(fileURLWithPath: filePath!)
             audioPlayer = try AVAudioPlayer(contentsOf: musicPath)
         } catch {
@@ -81,20 +84,24 @@ class PlayViewController: UIViewController {
             if self.rightTime.count != 0 {
                 if self.rightTime.first! - 200 <= intCurrentTime {
                     self.rightTime.removeFirst()
-                    self.scene.makeMoveNode()
+                    self.scene.makeMoveNode(direction: .right)
                 }
             }
 
             if self.leftTime.count != 0 {
                 if self.leftTime.first! <= intCurrentTime {
                     self.leftTime.removeFirst()
-                    self.scene.makeMoveNode()
+                    self.scene.makeMoveNode(direction: .left)
                 }
             }
         }
     }
     
-    
+    func getTimingData(audioName:String) {
+        let defaults = UserDefaults.standard
+        self.rightTime =  defaults.array(forKey: "\(audioName)_rightTime") as! [UInt]
+        self.leftTime = defaults.array(forKey: "\(audioName)_leftTime") as! [UInt]
+    }
 
 }
 

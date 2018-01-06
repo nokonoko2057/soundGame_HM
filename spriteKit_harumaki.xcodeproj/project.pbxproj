@@ -447,8 +447,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L658J8KRQ5;
+				DEVELOPMENT_TEAM = NWMCRKZDG5;
 				INFOPLIST_FILE = spriteKit_harumaki/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nokonoko.spriteKit-harumaki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -462,8 +463,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L658J8KRQ5;
+				DEVELOPMENT_TEAM = NWMCRKZDG5;
 				INFOPLIST_FILE = spriteKit_harumaki/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nokonoko.spriteKit-harumaki";
 				PRODUCT_NAME = "$(TARGET_NAME)";

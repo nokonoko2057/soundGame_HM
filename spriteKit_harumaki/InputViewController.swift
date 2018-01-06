@@ -24,12 +24,21 @@ class InputViewController: UIViewController {
     
     var audioPlayer:AVAudioPlayer!
     
+    var audioName:String = "sound"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         soundPlay()
+    }
+    
+    @IBAction func saveButton(button:UIButton){
+        if audioPlayer.isPlaying == true {
+            saveTimingData()
+            audioPlayer.stop()
+        }
     }
 
     @IBAction func tappedButton(button:UIButton){
@@ -52,7 +61,7 @@ class InputViewController: UIViewController {
     func soundPlay(){
         // 再生する audio ファイルのパスを取得
         do {
-            let filePath = Bundle.main.path(forResource: "sound",ofType: "mp3")
+            let filePath = Bundle.main.path(forResource: audioName,ofType: "mp3")
             let musicPath = URL(fileURLWithPath: filePath!)
             audioPlayer = try AVAudioPlayer(contentsOf: musicPath)
         } catch {
@@ -62,15 +71,21 @@ class InputViewController: UIViewController {
         
         audioPlayer.delegate = self
         audioPlayer.prepareToPlay()
-        
-        
+    }
+    
+    
+    func saveTimingData(){
+        print("save!!!")
+        let defaults = UserDefaults.standard
+        defaults.set(rightTime, forKey: "\(audioName)_rightTime")
+        defaults.set(leftTime, forKey: "\(audioName)_leftTime")
     }
     
 }
 
 extension InputViewController: AVAudioPlayerDelegate{
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        
+       saveTimingData()
     }
 }
 
